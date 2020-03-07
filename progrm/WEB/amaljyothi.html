@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+    height: 100%;
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+    .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+.parallax {
+    /* The image used */
+    background-image: url("C:/Users/Arjun/Desktop/WEB/Pictures/IMG_4744 2.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+    
+.columncard {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+  
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.containercard {
+  padding: 0 16px;
+}
+
+.containercard::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+    /* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+.row {
+    margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color:#ded1d1;
+    padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+    .footer-section {
+        text-align: center;
+  background: #1a1a1a;
+  color: #fff; }
+  .footer-section a {
+    color: rgba(255, 255, 255, 0.7); }
+    .footer-section a:hover {
+      color: #fff; }
+  .footer-section p {
+    color: rgba(255, 255, 255, 0.5); }
+  .footer-section .bordertop {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px; }
+  .footer-section .contact-info span.d-block {
+    font-style: italic;
+    color: #fff; }
+  .footer-section .social a {
+    font-size: 18px;
+    padding: 10px; }
+  .footer-section .link li {
+    margin-bottom: 10px; }
+
+.footer-newsletter .form-group {
+  position: relative; }
+
+.footer-newsletter .form-control {
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0;
+  color: #fff; }
+  .footer-newsletter .form-control::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: rgba(255, 255, 255, 0.2);
+    font-style: italic; }
+  .footer-newsletter .form-control::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgba(255, 255, 255, 0.2);
+    font-style: italic; }
+  .footer-newsletter .form-control:-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgba(255, 255, 255, 0.2);
+    font-style: italic; }
+  .footer-newsletter .form-control:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgba(255, 255, 255, 0.2);
+    font-style: italic; }
+  .footer-newsletter .form-control:active, .footer-newsletter .form-control:focus {
+    border-bottom: 1px solid white; }
+
+.footer-newsletter button[type="submit"] {
+  background: none;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+</style>
+</head>
+<body>
+
+    
+    <div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <a href="sabuuuuuuu.html">News</a>
+  <a href="laks.html">Blog</a>
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+    <script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+    <h1><em>HACKER'S DRAGONS</em></h1>
+<div class="parallax"></div>
+
+<div style="height:1015px;font-size:30px;font-family: inherit;font-style: italic;">
+    <h2> "Get connect with our team" </h2>
+<div class="row">
+  <div class="columncard">
+    <div class="card">
+      <img src="C:/Users/Arjun/Desktop/WEB/Pictures/newamal.jpg" alt="Jane" style="width:100%">
+      <div class="containercard">
+        <h2>de_road_hacker</h2>
+        <p class="title">CEO & Founder</p>
+       
+        <p>deroadhacker@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="columncard">
+    <div class="card">
+      <img src="C:/Users/Arjun/Desktop/WEB/Pictures/joekuttan.jpg" alt="Mike" style="width:100%">
+      <div class="containercard">
+        <h2>de_motormanic</h2>
+        <p class="title">Trainer</p>
+        
+        <p>demotormanic@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="columncard">
+    <div class="card">
+      <img src="C:/Users/Arjun/Desktop/WEB/Pictures/newamal.jpg" alt="John" style="width:100%">
+      <div class="containercard">
+        <h2>de_toxic_biker</h2>
+        <p class="title">Trainer</p>
+        
+        <p>detoxicbiker@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="parallax"></div>
+<div class="main">
+<div class="parallax"></div>
+
+    <h1><em>" If you ride like lightning you're gonna crash like thunder "</em></h1>
+<hr>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('nature')"> Rides</button>
+  <button class="btn" onclick="filterSelection('cars')"> Meet ups</button>
+  <button class="btn" onclick="filterSelection('people')"> People</button>
+</div>
+
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+      <img src="
+C:/Users/Arjun/Desktop/WEB/Pictures/Amal on Instagram_ _. . . . . . . . . . . . . CREE(JPG).jpg" alt="amalsabu" style="width:100%">
+      
+      
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="C:/Users/Arjun/Desktop/WEB/Pictures/IMG_4744 2.jpg" alt="amalsabu" style="width:100%">
+      
+     
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="C:/Users/Arjun/Desktop/WEB/Pictures/Amal on Instagram_ _. . . . . . . . . . . . . CREE(JPG).jpg" alt="Nature" style="width:100%">
+     
+     
+    </div>
+  </div>
+  
+  <div class="column cars">
+    <div class="content">
+      <img src="C:/Users/Arjun/Desktop/WEB/Pictures/Amal on Instagram_ _Life is a crazy ride_ and noth(JPG).jpg" alt="sabu" style="width:100%">
+      
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="C:/Users/Arjun/Desktop/WEB/Pictures/Amal on Instagram_ _Life is a crazy ride_ and noth(JPG).jpg" alt="Car" style="width:100%">
+    
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="C:/Users/Arjun/Desktop/WEB/Pictures/Amal on Instagram_ _Life is a crazy ride_ and noth(JPG).jpg" alt="Car" style="width:100%">
+      
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <img src="
+C:/Users/Arjun/Desktop/WEB/Pictures/Amal on Instagram_ _. . . . . . . . . . . . . CREE(JPG).jpg" alt="Car" style="width:100%">
+     
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="C:/Users/Arjun/Desktop/WEB/Pictures/IMG_4744 2.jpg" alt="Car" style="width:100%">
+     
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="C:/Users/Arjun/Desktop/WEB/Pictures/Amal on Instagram_ _. . . . . . . . . . . . . CREE(JPG).jpg" alt="Car" style="width:100%">
+      
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+<footer class="section footer-section">
+          <div class="col-md-3 mb-5 pr-md-5 contact-info">
+            <p ><span class="d-block"><span class="ion-ios-email h5 mr-3 text-primary"></span>Email:</span> <span> deroadhacker@gmail.com</span></p>
+          </div>
+          <div class="col-md-3 mb-5">
+            <p style="text-align: center">Sign up for our newsletter</p>
+            <form action="#" class="footer-newsletter">
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Your email...">
+                <button type="submit" class="btn"><span class="fa fa-paper-plane"></span></button>
+              </div>
+            </form>
+          </div>
+    </footer>
+</body>
+</html>
